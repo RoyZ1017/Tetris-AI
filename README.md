@@ -43,10 +43,10 @@ This model was trained for a total of 1 million total time steps using stable ba
 The overall structure of the genetic algorithm is quite similar to the reinforcement learning model as the same environment is used. Both have the same general inputs, outputs, and reward with only a few key differences.
 
 ### Fitness Function
-The Fitness Function is the exact same as the reward function used in the reinforcement model, however the final fitness value is determined by the average over a 10 game window. 
+The Fitness Function is the exact same as the reward function used in the reinforcement model, however the final fitness value is determined by the average over a 5 game window. 
 
 ### Training
-This model was trained using the NEAT library with a population size of 50, an activation mutation rate of 0.1, and a survival threshold of 0.2. The model started off with 25 inputs, 4 outputs, and 0 hidden layers, and had a max generation of 50. It is worth mentioning that the model seemed to stagnate after generation 30 seeing little to further growth. 
+This model was trained using the NEAT library with a population size of 50, an activation mutation rate of 0.1, and a survival threshold of 0.2. The model started off with 25 inputs, 4 outputs, and 0 hidden layers, and had a max generation of 50. It is worth mentioning that the model seemed to stagnate after generation 30 seeing little to no further growth. 
 
 # Results
 Overall both AI's were able to play Tetris at an effective level better than most humans. Both AI's can clear up to 1000 lines at most however it is somewhat inconsistent due to piece luck. The model trained using the NEAT algorithm was particularly unstable, sometimes dying in the early game. The reinforcement model also suffers from some inconsistency problems, but is much better in comparison to the NEAT model. This could be due to the fact that some board states weren't seen in the training phase resulting in poorly produced weights during the testing phase. However despite this inconsistency both models could still easily clear well over 100 lines venturing close to 500 and sometimes upwards of 900-1000. In the end both models were able to play Tetris at an effective level, but the winner between the two would have to be the reinforcement learning model due to its added consistency. 
